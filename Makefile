@@ -3,14 +3,14 @@ CC = g++
 
 OBJ = Book.o List.o  Menu.o main.o
 
-# Name des Programms
+# name of the program
 TARGET = library
 
 FLAGS = -g -std=c++11 -Wall -MMD -fmessage-length=0
 
 all: $(TARGET)
 
-#special - "make clean" löscht alle *.o Dateien
+# "make clean" delete all *.o Dateien
 clean:
 	rm -fv $(OBJ)
 
@@ -18,4 +18,4 @@ clean:
 	$(CC) -c $(FLAGS) -o $@ $<
 
 $(TARGET): $(OBJ)
-	$(CC) -o $(TARGET) $(OBJ) $(LIBS)
+	$(CC) -o $(TARGET) $(OBJ)
