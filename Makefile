@@ -6,13 +6,13 @@ OBJ = Book.o List.o  Menu.o main.o
 # name of the program
 TARGET = library
 
-FLAGS = -g -std=c++11 -Wall -MMD -fmessage-length=0
+FLAGS = -g -std=c++14 -Wall -MMD -fmessage-length=0
 
 all: $(TARGET)
 
-# "make clean" delete all *.o Dateien
+# "make clean" delete all *.o files
 clean:
-	rm -fv $(OBJ)
+	rm library $(OBJ)
 
 %.o : %.cpp
 	$(CC) -c $(FLAGS) -o $@ $<
